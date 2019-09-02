@@ -16,7 +16,7 @@ import dj_database_url
 from decouple import config,Csv
 
 MODE=config('MODE', default="dev")
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = '6(d1m=h9ydgwk63amqc+emgngy)yvh!3r*mn3l-f9n&h9(swk='
 # DEBUG = config('DEBUG', default=False, cast=bool)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
