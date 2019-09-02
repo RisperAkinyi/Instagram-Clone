@@ -47,7 +47,7 @@ def edit_profile(request):
         form = PostProfile()
             
     return render(request,'profile/edit_profile.html',{'form':form})
-#image views
+
 @login_required(login_url='/accounts/login/')
 def view_single_image(request,image_id):
     image = Images.get_image_by_id(image_id)
@@ -64,7 +64,7 @@ def view_single_image(request,image_id):
     else:
         form = PostComment()
     return render(request, 'image.html',{'image':image,'form':form,'comments':comments})
-#search view    
+    
 def search(request):
     if 'search' in request.GET and request.GET['search']:
         search_term = request.GET.get('search')
