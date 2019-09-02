@@ -19,7 +19,7 @@ def profile(request,username):
     title = f'{user.username}\'s Profile '
     images = Images.get_profile_images(user.id)
     return render(request, 'profile/profile.html',{'title':title,'users':user,'profile':profile,'images':images})
-
+#post view
 @login_required(login_url='/accounts/login/')
 def post_image(request):
     current_user = request.user
