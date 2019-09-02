@@ -1,7 +1,4 @@
-# [Instaclone](https://gkarumba-instaclone.herokuapp.com)
-#### Web clone of the Instagram app
-#
-#### By **[GKarumba](https://github.com/gkarumba)**
+# Instagram Clone
 
 ## Description
 This is a simple web clone of the instagram website. A user can create an account and sign into it. 
@@ -27,7 +24,7 @@ A user can view photos uploaded by other users in the home page of app.
 
 ### Clone the Repo
 Run the following command on the terminal:
-`git clone https://github.com/gkarumba/Instagram Clone.git && cd Instagram`
+`git clone https://github.com/RisperAkinyi/Instagram-Clone Clone.git && cd Instagram`
 
 ### Activate virtual environment
 Activate virtual environment using python3.6 as default handler
@@ -81,8 +78,8 @@ Like and Follow functionality do not work
     - Heroku
     - Postgresql
 
-## Support and contact details
-Contact me on gachegua@gmail.com for any comments, reviews or advice.
+## Further help
+Contact me at risperakinyi3@gmail.com if you run into any issue or have any questions
 
 ### License
-Copyright (c) [gkarumba](https://github.com/gkarumba/Instagram-Clone/blob/master/LICENSE)
+Copyright (c) 2019 Risper Akinyi
