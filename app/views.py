@@ -6,12 +6,11 @@ from .forms import PostComment,PostImageForm,PostProfile
 from .models import Images, Profiles, Comments 
 
 # Create your views here.
-#index view
 @login_required(login_url='/accounts/register/')
 def index(request):
     images = Images.get_all_images()
     return render(request,'index.html',{'images':images})
-#profile view
+
 @login_required(login_url='/accounts/login/')
 def profile(request,username):
     user = User.objects.get(username=username)
@@ -19,7 +18,7 @@ def profile(request,username):
     title = f'{user.username}\'s Profile '
     images = Images.get_profile_images(user.id)
     return render(request, 'profile/profile.html',{'title':title,'users':user,'profile':profile,'images':images})
-#post view
+
 @login_required(login_url='/accounts/login/')
 def post_image(request):
     current_user = request.user
@@ -48,7 +47,7 @@ def edit_profile(request):
         form = PostProfile()
             
     return render(request,'profile/edit_profile.html',{'form':form})
-
+#image views
 @login_required(login_url='/accounts/login/')
 def view_single_image(request,image_id):
     image = Images.get_image_by_id(image_id)
