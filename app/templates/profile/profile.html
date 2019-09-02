@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="container" style="margin-top: 20px;margin-bottom: 10px;">
-    <div class="row" style="box-shadow:9px 10px 10px -6px rgba(136,136,136,0.88);margin-bottom: 10px;padding:10px;" >
+    <div class="row" >
     <!-- displaying Username-->
         <div class="col-md-7">
             <!-- Display profile photo -->
@@ -22,15 +22,15 @@
         </div>
         <div class="col-md-5">
             {% if users.username == user.username %}
-            <a href="{% url 'editProfile' %}" style="margin-bottom: 10px;margin-top:10px;"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Edit profile <i class="fa fa-pencil" aria-hidden="true"></i></button></a>
-            <a href="{% url 'postImage' %}"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Post Image <i class="fa fa-picture-o" aria-hidden="true"></i></button></a>
+            <a href="{% url 'editProfile' %}" style="margin-bottom: 10px;margin-top:10px;"><button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Edit profile <i class="fa fa-pencil" aria-hidden="true"></i></button></a>
+            <a href="{% url 'postImage' %}"><button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Post Image <i class="fa fa-picture-o" aria-hidden="true"></i></button></a>
             {% endif %}
         </div>
     </div>
 
     <div class="row" style="margin-bottom: 10px;">
         <div class="col-md-12">
-            <h3>Images By {{user.username}}</h3>
+            <h3>-Images by {{user.username}}-</h3>
         </div>
         {% if images %}
             {% for image in images %}
