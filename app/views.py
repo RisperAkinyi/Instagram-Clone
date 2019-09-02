@@ -64,7 +64,7 @@ def view_single_image(request,image_id):
     else:
         form = PostComment()
     return render(request, 'image.html',{'image':image,'form':form,'comments':comments})
-    
+#search view    
 def search(request):
     if 'search' in request.GET and request.GET['search']:
         search_term = request.GET.get('search')
