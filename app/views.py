@@ -5,12 +5,13 @@ from django.contrib.auth.decorators import login_required
 from .forms import PostComment,PostImageForm,PostProfile
 from .models import Images, Profiles, Comments 
 
-# Create your view function here.
+# Create your views here.
+#index view
 @login_required(login_url='/accounts/register/')
 def index(request):
     images = Images.get_all_images()
     return render(request,'index.html',{'images':images})
-
+#profile view
 @login_required(login_url='/accounts/login/')
 def profile(request,username):
     user = User.objects.get(username=username)
